@@ -5,21 +5,21 @@
 
 let a = 1;
 let b = 2;
-let i = 1;
 let sum = 0 ;
 let total = 0;
 
-do{
-    while (i < 10){
-        // Check the number is even or not
+function fibSum(limit){
+    while (b < limit){
+
+         // Check the number is even or not
         if (b % 2 == 0){
             total += b;
         }
         sum = a + b;
         a = b;
-        b = sum;  
-        i++; 
+        b = sum;
     }
-}while(b < 400)
+    console.log(total);
+}
 
-console.log(total);
+fibSum(4e6);     //  4e6 = 4000000  = 4 & 6 zeroes
