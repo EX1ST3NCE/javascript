@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        body{
+            margin: 0;
+        }
+        h3{
+            color: wheat;
+        }
+        .operator{
+            background-color: #ff4561;
+            color: white;
+        }
+        .result{
+            background-color: green;
+            color: white;
+        }
+        .main{
+            margin: 60px auto;
+            text-align: center;
+            padding-top: 10px;
+            background-color: #3d4543;
+            height: 380px;
+            width: 300px;
+        }
+        input{
+            width: 65%;
+            height: 25px;
+            margin-bottom: 10px;
+        }
+        .number{
+            background-color: steelblue;
+            color: white;
+        }
+        button{
+            margin: 5px;
+            padding: 10px;
+            height: 40px;
+            width: 40px;
+        }
+        .clr{
+            width: 80px;
+            background-color: red;
+            color: white;
+            font-size: large;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <h3>Calculator</h3>
+        <div>
+            <input type="text" id="display">
+        </div>
+        <div>
+            <button class="number" onclick="document.getElementById('display').value+=1" value="1">1</button>
+            <button class="number" onclick="document.getElementById('display').value+=2" value="2">2</button>
+            <button class="number" onclick="document.getElementById('display').value+=3" value="3">3</button>
+            <button class="operator" onclick="document.getElementById('display').value+='+'" value="+">+</button>
+        </div>
+        <div>
+            <button class="number" onclick="document.getElementById('display').value+=4" value="4">4</button>
+            <button class="number" onclick="document.getElementById('display').value+=5" value="5">5</button>
+            <button class="number" onclick="document.getElementById('display').value+=6" value="6">6</button>
+            <button class="operator" onclick="document.getElementById('display').value+='-'" value="-">-</button>
+        </div>
+        <div>
+            <button class="number" onclick="document.getElementById('display').value+=7" value="7">7</button>
+            <button class="number" onclick="document.getElementById('display').value+=8" value="8">8</button>
+            <button class="number" onclick="document.getElementById('display').value+=9" value="9">9</button>
+            <button class="operator" onclick="document.getElementById('display').value+='*'" value="*">*</button>
+        </div>
+        <div>
+            <button class="number" onclick="document.getElementById('display').value+=0" value="0">0</button>
+            <button class="number" onclick="document.getElementById('display').value+='.'" value=".">.</button>
+            <button class="result" value="=" onclick="res()">=</button>
+            <button class="operator" onclick="document.getElementById('display').value+='/'" value="/">/</button>
+        </div>
+        <div>
+            <button class="clr" id="clr" onclick="clr()">Clear</button>
+        </div>
+    </div>
+    <script>
+        function res(){
+            let val=document.getElementById('display').value;
+            let result=eval(val);
+            document.getElementById('display').value=result;
+        }
+        function clr(){
+            document.getElementById('display').value="";
+        }
+    </script>
+</body>
+</html>

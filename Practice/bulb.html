@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bulb</title>
+    <style>
+        .center{
+            text-align: center;
+        }
+        button{
+            padding: 5px;
+            font-weight: 100;
+        }
+    </style>
+</head>
+<body>
+    <div class="center">
+        <h3>Bulb on & off using javascript</h3>
+        <img id="img" src="img/pic_bulboff.gif" /><br/><br/>
+        <button onclick="document.getElementById('img').src=('img/pic_bulbon.gif')">Turn on the light</button>
+        <button onclick="document.getElementById('img').src=('img/pic_bulboff.gif')">Turn off the light</button>
+    </div>
+</body>
+</html>
