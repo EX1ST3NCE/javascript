@@ -10,7 +10,7 @@
 
 const regexVar = (s) =>{
     if(s.length >= 3){
-        const reg = /^[aeiou][\w]+[aeiou]$/
+        const reg = /^([aeiou]).+([aeiou])$/
         let re = reg.test(s); 
         if(!(s[0] === s[s.length - 1])){
             re = false;
@@ -20,3 +20,9 @@ const regexVar = (s) =>{
 }
 
 console.log(regexVar('abcda'));
+
+
+//   const re = /^([aeiou]).+(\1)$/               Instead of writing so much of code
+//   \1 matches to previously stored match. 
+//   \2 looks for matched item stored 2 instances ago 
+//   \3 looks for matched item stored 3 ago, etc
