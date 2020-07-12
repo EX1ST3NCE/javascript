@@ -6,7 +6,7 @@
 // Sample Input1 -   bcd               Sample Output1 - false
 // Sample Input2 -   abcd              Sample Output2 - false
 // Sample Input3 -   abcda             Sample Output3 - true
-// Sample Input2 -   abcdo             Sample Output4 - false
+// Sample Input4 -   abcdo             Sample Output4 - false
 
 const regexVar = (s) =>{
     if(s.length >= 3){
