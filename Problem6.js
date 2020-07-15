@@ -1,4 +1,5 @@
-// Complete the getLetter(s) function in the editor. It has one parameter: a string, , consisting of lowercase English alphabetic letters (i.e., a through z). It must return A, B, C, or D depending on the following criteria:
+// Complete the getLetter(s) function. It has one parameter: a string, , consisting of lowercase English alphabetic letters (i.e., a through z).
+// It must return A, B, C, or D depending on the following criteria:
 
 // If the first character in string, is in the set {a,e,i,o,u}, then return A.
 // If the first character in string, is in the set {b,c,d,f,g}, then return B.
