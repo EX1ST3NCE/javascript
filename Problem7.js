@@ -4,9 +4,9 @@
 // SampleInput1 - 2, 3 , 5, 6, 6            SampleOutput1 - 5
 
 function getSecondLargest(nums){
-    nums.sort();                                        // Sorting the array in ascending order
+    nums.sort((a,b) => a-b);                            // Sorting the array in ascending order                                   
     const lastElement = nums[nums.length - 1];          // Storing the value of last element of array
-    
+
     for(let i = nums.length - 2; i >= 0; i--){          
         if(nums[i] !== lastElement){                    // Checking the second last element with the last element
             console.log(`The second largest number is ${nums[i]}`);
@@ -15,4 +15,4 @@ function getSecondLargest(nums){
     }
 }
 
-getSecondLargest([4,5,3,6,6]);
+getSecondLargest([1,2,3,4,5,6,7,8,9,10]);
